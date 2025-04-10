@@ -1,0 +1,17 @@
+module.exports.config = {
+    name: "restart",
+version: "1.0.0",
+hasPermssion: 0,
+credits: "Gia Quân",
+description: "restart bot",
+commandCategory: "system",
+usages: "restart",
+cooldowns: 5,
+};
+
+module.exports.run = async ({ api, event, args, client, utils }) => {
+    const eval = require("eval");
+    
+    return api.sendMessage("Connected successfully✅", event.threadID, () => eval("module.exports = process.exit(1)", true), event.messageID);
+
+   }

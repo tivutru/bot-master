@@ -1,0 +1,62 @@
+{
+  "language": "vi",
+  "DeveloperMode": false,
+  "autoCreateDB": true,
+  "allowInbox": true,
+  "selfListen": true,
+  "adminOnly": false,
+  "autoClean": true,
+  "adminboxOnly": true,
+  "REFRESHING": "on",
+  "commandDisabled": [
+    "goiadmin.js",
+    "goiadmin.js",
+    "delete.js",
+    "lever.js",
+    "lever.js"
+  ],
+  "eventDisabled": [],
+  "BOTNAME": "Asuna",
+  "PREFIX": "/",
+  "ADMINBOT": [
+    "100064065644851",
+    "100006686599463",
+    "100092296159907",
+    "100061254849495"
+  ],
+  "DATABASE": {
+    "sqlite": {
+      "storage": "data.sqlite"
+    }
+  },
+  "FBSTATEPATH": "fbstate.json",
+  "FCAOption": {
+    "forceLogin": true,
+    "listenEvents": true,
+    "pauseLog": true,
+    "logLevel": "error",
+    "selfListen": true
+  },
+  "log": {
+    "enable": true
+  },
+  "leave": {
+    "status": false,
+    "number": 0
+  },
+  "checktt": {
+    "maxColumn": 10
+  },
+  "data": {
+    "enable": true,
+    "TIDCollect": [],
+    "TIDSend": [],
+    "type": "photo"
+  },
+  "lever": {
+    "unsendMessageAfter": 5
+  },
+  "filter": {
+    "maxColumn": 10
+  }
+}

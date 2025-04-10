@@ -1,0 +1,8 @@
+{
+  "status": true,
+  "result": {
+    "success": false,
+    "message": "AxiosError: Request failed with status code 403"
+  },
+  "author": "Deku"
+}
