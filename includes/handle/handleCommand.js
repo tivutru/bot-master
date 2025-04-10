@@ -64,11 +64,10 @@ if (!threadInfo || Object.keys(threadInfo).length === 0) { // Kiểm tra threadI
 		///////////////////////////////////////
 
 		var permssion = 0;
-		const find = threadInfo.adminIDs.find(el => el.id == senderID);
-		
-		if (ADMINBOT.includes(senderID.toString())) permssion = 2;
-		else if (!ADMINBOT.includes(senderID) && find) permssion = 1;
+const find = (threadInfo.adminIDs || []).find(el => el.id == senderID);
 
+if (ADMINBOT.includes(senderID.toString())) permssion = 2;
+else if (find) permssion = 1;
 		if (command.config.hasPermssion > permssion) return api.sendMessage(`Bạn không đủ quyền hạn để có thể sử dụng lệnh "${command.config.name}"`, event.threadID, event.messageID);
 
 		//////////////////////////////////////
