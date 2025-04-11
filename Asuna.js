@@ -271,3 +271,11 @@ const { Sequelize, sequelize } = require("./includes/database");
 		() => logger(`Kết nối cơ sở dữ liệu thất bại, Lỗi: ${error.name}: ${error.message}`, "[ DATABASE ]");
 	}})();
 
+// 🛡️ Bắt lỗi Promise bị reject mà không có catch
+process.on('unhandledRejection', (reason, p) => {
+  });
+  
+  // 🛡️ Bắt lỗi không bắt được toàn cục
+  process.on('uncaughtException', (err) => {
+	console.error("🧨 Uncaught Exception:", err);
+  });
