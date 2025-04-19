@@ -2,9 +2,9 @@ module.exports.config = {
 		name: "syinfo",
 	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "Gia Quân",
+	credits: "Hoàng Quân",
 	description: "xem thông tin bot trên máy chủ",
-	commandCategory: "Hình Ảnh",
+	commandCategory: "syinfo",
 	usages: "syinfo",
 	cooldowns: 5,
 
