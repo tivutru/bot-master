@@ -18,7 +18,7 @@ module.exports.run = function ({ api, event, args, client, global }) {
     if (!command) {
         const arrayInfo = [];
         const page = parseInt(args[0]) || 1;
-        const numberOfOnePage = 15;
+        const numberOfOnePage = 10;
         let i = 0;
         var group = [],
             msg = "====PLUGINS====\n";
@@ -30,7 +30,7 @@ module.exports.run = function ({ api, event, args, client, global }) {
         i = startSlice;
         const returnArray = arrayInfo.slice(startSlice, startSlice + numberOfOnePage);
         for (let item of returnArray) msg += `${++i}/ ${item}\n`;
-        const t = `❗Trang (${page}/${Math.ceil(arrayInfo.length / numberOfOnePage)})\nDùng &help + Số trang\nĐể xem các lệnh trên Bot\nHiện tại có ${arrayInfo.length} lệnh trên bot này`;
+        const t = `❗Trang (${page}/${Math.ceil(arrayInfo.length / numberOfOnePage)})\nDùng /help + Số trang\nĐể xem các lệnh trên Bot\nHiện tại có ${arrayInfo.length} lệnh trên bot này`;
         return api.sendMessage(msg + t, threadID, messageID);
     }
 
